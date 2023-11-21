@@ -1,10 +1,9 @@
 Package: scrapeR
 Type: Package
-Title: The \code{scraper} Function Fetches and Extracts Text Content from Specified Web Pages and Handles HTTP Errors and Parses HTML Efficiently
+Title: ScrapeR Functions Fetch and Extract Text Content from Specified Web Pages
 Version: 0.1.7
-Author: Mathieu Dubeau, Ph.D
-Maintainer: Mathieu Dubeau <mdubeau20@gmail.com>
-Description: The \code{scrapeR} function fetches and extracts text content from specified web pages. It handles HTTP errors and parses HTML efficiently. The function can handle hundreds of websites at a time using the 'in_batches' command.
+Authors@R: c(person("Mathieu Dubeau", email = "mdubeau20@gmail.com", role = c("aut", "cre", "cph")))
+Description: The scrapeR function fetches and extracts text content from specified web pages. It handles HTTP errors and parses HTML efficiently. The function can handle hundreds of websites at a time using the 'in_batches' command.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
