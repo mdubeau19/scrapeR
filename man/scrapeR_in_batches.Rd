@@ -24,7 +24,7 @@ scrapeR_in_batches(df, url_column, output_file)
   This function divides the input dataframe into batches of a fixed size (default: 100). For each batch, it extracts the combined text content from the web pages of the URLs in the specified column. The results are appended to the output file. The function also includes a throttling mechanism to pause between batch processing, reducing the load on the server being scraped.
 }
 \value{
-  There is no return value, as the function's output is directly written to the specified file.
+  There is no return value, as the functions output is directly written to the specified file.
 }
 \references{
   Refer to \href{https://www.rdocumentation.org/packages/rvest}{rvest package documentation} and \href{https://www.rdocumentation.org/packages/httr}{httr package documentation} for underlying web scraping methods.
