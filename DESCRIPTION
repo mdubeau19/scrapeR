@@ -5,7 +5,7 @@ Version: 0.1.7
 Author: Mathieu Dubeau, Ph.D
 Maintainer: Mathieu Dubeau <mdubeau20@gmail.com>
 Description: The \code{scrapeR} function fetches and extracts text content from specified web pages. It handles HTTP errors and parses HTML efficiently. The function can handle hundreds of websites at a time using the 'in_batches' command.
-License: Non-FOSS package license (FOSS)
+License: MIT
 Encoding: UTF-8
 LazyData: true
 Imports: 
