@@ -36,10 +36,10 @@ scrapeR(url)
   \code{\link[rvest]{html_text}}
 }
 \examples{
-
- url <- "http://example.com"
+\donttest{
+ url <- "http://www.example.com"
 scraped_text <- scrapeR(url)
-
+}
 }
 \keyword{web scraping}
 \keyword{text extraction}

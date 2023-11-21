@@ -41,9 +41,15 @@ scrapeR_in_batches(df, url_column, output_file)
 }
 \examples{
 
-df <- data.frame(url = c("http://example1.com", "http://example2.com"))
-scrapeR_in_batches(df, "url", "output.csv")
+  mock_scrapeR <- function(url) {
+    return(paste("Scraped content from", url))
+  }
 
+  df <- data.frame(url = c("http://site1.com", "http://site2.com"), stringsAsFactors = FALSE)
+
+  \dontrun{
+    scrapeR_in_batches(df, url_column = "url", output_file = "mock_output.csv")
+  }
 }
 \keyword{ batch processing }
 \keyword{ web scraping }
