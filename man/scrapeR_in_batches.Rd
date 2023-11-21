@@ -40,11 +40,10 @@ scrapeR_in_batches(df, url_column, output_file)
   \code{\link[httr]{GET}}, \code{\link[rvest]{read_html}}, \code{\link[rvest]{html_nodes}}, \code{\link[rvest]{html_text}}, \code{\link[utils]{write.table}}
 }
 \examples{
-## Example of using scrapeR_in_batches
-## Not run:
-# df <- data.frame(url = c("http://example1.com", "http://example2.com"))
-# scrapeR_in_batches(df, "url", "output.csv")
-## End(Not run)
+
+df <- data.frame(url = c("http://example1.com", "http://example2.com"))
+scrapeR_in_batches(df, "url", "output.csv")
+
 }
 \keyword{ batch processing }
 \keyword{ web scraping }
