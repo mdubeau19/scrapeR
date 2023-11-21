@@ -40,7 +40,7 @@ scrapeR_in_batches <- function(df, url_column, output_file) {
   num_batches <- ceiling(num_rows / batch_size)
 
   for (i in 1:num_batches) {
-    cat("Processing batch", i, "of", num_batches, "\n")
+    message("Processing batch ", i, " of ", num_batches)
     start_row <- (i - 1) * batch_size + 1
     end_row <- min(i * batch_size, num_rows)
 
@@ -57,7 +57,8 @@ scrapeR_in_batches <- function(df, url_column, output_file) {
     # Throttle requests
     Sys.sleep(1)
   }
-  cat("Processing complete.\n")
+  message("Processing complete.")
 }
+
 
 
