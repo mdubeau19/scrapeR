@@ -7,7 +7,7 @@
   The \code{scrapeR_in_batches} function processes a dataframe in batches, scraping web content from URLs in a specified column and writing the scraped content to a column in df.
 }
 \usage{
-scrapeR_in_batches(df, url_column, output_file)
+scrapeR_in_batches(df, url_column, extract_contacts)
 }
 \arguments{
   \item{df}{

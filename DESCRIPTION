@@ -11,5 +11,6 @@ Imports:
     httr,
     rvest,
     utils,
-    magrittr
+    magrittr,
+    stringr
 

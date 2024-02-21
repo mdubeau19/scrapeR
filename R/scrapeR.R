@@ -1,5 +1,4 @@
 
-
 scrapeR <- function(url) {
   # Use tryCatch to handle potential errors during web scraping
   page <- tryCatch({
@@ -56,17 +55,19 @@ scrapeR_in_batches <- function(df, url_column, extract_contacts = FALSE) {
     message(sprintf("Processing batch %d of %d", i, num_batches))
     batch <- df[((i-1)*batch_size + 1):min(i*batch_size, num_rows), , drop = FALSE]
 
-    batch$content <- sapply(batch[[url_column]], function(url) scrapeR(url, extract_contacts), USE.NAMES = FALSE)
+    batch$content <- sapply(batch[[url_column]], scrapeR, USE.NAMES = FALSE)
 
     if (extract_contacts) {
-      contact_info <- lapply(batch$content, function(content) {
-        if (is.list(content) && !is.null(content$ContactInfo)) {
-          return(content$ContactInfo)
+      # Directly call extract_contact_info here on the combined_text
+      contact_info <- lapply(batch$content, function(combined_text) {
+        if (!is.na(combined_text)) {
+          return(extract_contact_info(combined_text))
         } else {
           return(list(emails = NA, phone_numbers = NA))
         }
       })
 
+      # Extract emails and phone numbers and add them to the batch dataframe
       batch$emails <- sapply(contact_info, function(info) info$emails)
       batch$phone_numbers <- sapply(contact_info, function(info) info$phone_numbers)
     }
