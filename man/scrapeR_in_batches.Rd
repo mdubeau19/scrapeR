@@ -34,7 +34,7 @@ scrapeR_in_batches(df, url_column, extract_contacts)
   Mathieu Dubeau Ph.D
 }
 \note{
-  Ensure that the \pkg{httr} and \pkg{rvest} packages are installed and loaded. Also, handle large datasets and output files with care to avoid memory issues.
+  Ensure that the \pkg{httr}, \pkg{rvest}, and \pkg{stringr} packages are installed and loaded. Also, handle large datasets and output files with care to avoid memory issues.
 }
 
 \seealso{
