@@ -1,3 +1,4 @@
+library(roxygen2)
 
 scrapeR <- function(url) {
   # Use tryCatch to handle potential errors during web scraping
